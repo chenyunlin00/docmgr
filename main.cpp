@@ -7,7 +7,7 @@
 
 using namespace std;
 
-#define QSS_FILE "AMOLED.qss"
+#define QSS_FILE "ManjaroMix.qss"
 
 int main(int argc, char *argv[])
 {
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     if (file.open(QIODeviceBase::ReadOnly))
     {
         QString txt = QString(file.readAll());
-        cout << txt.toStdString() << endl;
+        //cout << txt.toStdString() << endl;
         a.setStyleSheet(txt);
     }
     return a.exec();

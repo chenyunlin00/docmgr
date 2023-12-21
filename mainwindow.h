@@ -2,8 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QList>
 
 class QLabel;
+class QTreeWidget;
+class QAction;
+class QTreeWidgetItem;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,14 +20,19 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    void Init();
 
 public slots:
     void ontime();
     void refreshTree();
+    void onCustomContextMenuRequested(const QPoint&);
+    void onActDownload();
 
 private:
     Ui::MainWindow *ui;
     QLabel *_timeLabel;
+    QTreeWidget *_rightTree;
+    QList<QTreeWidgetItem*> *_rightTreeSelItem;
+    QAction *_actDownload;
 };
 #endif // MAINWINDOW_H

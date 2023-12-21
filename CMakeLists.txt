@@ -21,6 +21,11 @@ set(PROJECT_SOURCES
         mainwindow.h
         resource_tree.h
         mainwindow.ui
+        resource.qrc
+)
+
+set(EXPLORER_RESOURCE
+resource.qrc
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -53,6 +58,8 @@ set_target_properties(DocMgr PROPERTIES
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
 )
+
+
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(DocMgr)
