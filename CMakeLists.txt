@@ -22,6 +22,10 @@ set(PROJECT_SOURCES
         resource_tree.h
         mainwindow.ui
         resource.qrc
+        tree_node.cpp
+        tree_node.h
+        my_enum.h
+        my_constant.h
 )
 
 set(EXPLORER_RESOURCE

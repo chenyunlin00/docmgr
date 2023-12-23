@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     {
         QString txt = QString(file.readAll());
         //cout << txt.toStdString() << endl;
-        a.setStyleSheet(txt);
+        //a.setStyleSheet(txt);
     }
     return a.exec();
 }

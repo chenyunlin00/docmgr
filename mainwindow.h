@@ -8,6 +8,8 @@ class QLabel;
 class QTreeWidget;
 class QAction;
 class QTreeWidgetItem;
+class TreeNode;
+class ThreeDItemModel;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,6 +29,7 @@ public slots:
     void refreshTree();
     void onCustomContextMenuRequested(const QPoint&);
     void onActDownload();
+    void onLeftTreeSelect(const QModelIndex&, const QModelIndex &);
 
 private:
     Ui::MainWindow *ui;
@@ -34,5 +37,10 @@ private:
     QTreeWidget *_rightTree;
     QList<QTreeWidgetItem*> *_rightTreeSelItem;
     QAction *_actDownload;
+
+    ThreeDItemModel *_modelDesign;
+    TreeNode *_nodeDesign;
+    QLabel * _rightDesingLabel; // 右侧显示设计图的
+
 };
 #endif // MAINWINDOW_H
